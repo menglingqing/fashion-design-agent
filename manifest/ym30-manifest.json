@@ -1,0 +1,206 @@
+{
+  "name": "ym30.fashion-design-expert",
+  "display_name": "服装设计专家",
+  "version": "1.0.0",
+  "description": "面向服装品牌、设计师和商品团队的专业设计决策与开发协作能力",
+  "capabilities": [
+    {
+      "id": "plan_fashion_collection",
+      "description": "当用户需要季节、胶囊系列、品类或 SKU 企划时使用",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "request": {"type": "string", "minLength": 1},
+          "project_context": {"type": "object"},
+          "references": {"type": "array"},
+          "constraints": {"type": "object"},
+          "response_language": {"type": "string", "default": "zh-CN"}
+        },
+        "required": ["request"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "summary": {"type": "string"},
+          "route": {"type": "string"},
+          "version": {"type": "string"},
+          "sections": {"type": "array", "items": {"type": "object"}},
+          "decision_log": {"type": "object"},
+          "quality_checks": {"type": "array", "items": {"type": "object"}},
+          "next_action": {"type": "string"}
+        },
+        "required": ["summary", "route", "version", "sections", "decision_log", "quality_checks", "next_action"],
+        "additionalProperties": false
+      },
+      "required_permissions": {"data": [], "tools": []},
+      "write_back": [],
+      "risk_level": "low"
+    },
+    {
+      "id": "develop_apparel_style",
+      "description": "当用户需要从想法或授权参考开发一件服装单款时使用",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "request": {"type": "string", "minLength": 1},
+          "project_context": {"type": "object"},
+          "references": {"type": "array"},
+          "constraints": {"type": "object"},
+          "response_language": {"type": "string", "default": "zh-CN"}
+        },
+        "required": ["request"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "summary": {"type": "string"},
+          "route": {"type": "string"},
+          "version": {"type": "string"},
+          "sections": {"type": "array", "items": {"type": "object"}},
+          "decision_log": {"type": "object"},
+          "quality_checks": {"type": "array", "items": {"type": "object"}},
+          "next_action": {"type": "string"}
+        },
+        "required": ["summary", "route", "version", "sections", "decision_log", "quality_checks", "next_action"],
+        "additionalProperties": false
+      },
+      "required_permissions": {"data": [], "tools": []},
+      "write_back": [],
+      "risk_level": "low"
+    },
+    {
+      "id": "analyze_and_extend_reference",
+      "description": "当用户需要分析服装参考并形成明显差异化的新方向时使用",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "request": {"type": "string", "minLength": 1},
+          "project_context": {"type": "object"},
+          "references": {"type": "array"},
+          "constraints": {"type": "object"},
+          "response_language": {"type": "string", "default": "zh-CN"}
+        },
+        "required": ["request"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "summary": {"type": "string"},
+          "route": {"type": "string"},
+          "version": {"type": "string"},
+          "sections": {"type": "array", "items": {"type": "object"}},
+          "decision_log": {"type": "object"},
+          "quality_checks": {"type": "array", "items": {"type": "object"}},
+          "next_action": {"type": "string"}
+        },
+        "required": ["summary", "route", "version", "sections", "decision_log", "quality_checks", "next_action"],
+        "additionalProperties": false
+      },
+      "required_permissions": {"data": [], "tools": []},
+      "write_back": [],
+      "risk_level": "low"
+    },
+    {
+      "id": "create_fashion_visual_brief",
+      "description": "当用户需要服装效果图、款式图、细节图或展板的文字方案与提示词时使用",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "request": {"type": "string", "minLength": 1},
+          "project_context": {"type": "object"},
+          "references": {"type": "array"},
+          "constraints": {"type": "object"},
+          "response_language": {"type": "string", "default": "zh-CN"}
+        },
+        "required": ["request"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "summary": {"type": "string"},
+          "route": {"type": "string"},
+          "version": {"type": "string"},
+          "sections": {"type": "array", "items": {"type": "object"}},
+          "decision_log": {"type": "object"},
+          "quality_checks": {"type": "array", "items": {"type": "object"}},
+          "next_action": {"type": "string"}
+        },
+        "required": ["summary", "route", "version", "sections", "decision_log", "quality_checks", "next_action"],
+        "additionalProperties": false
+      },
+      "required_permissions": {"data": [], "tools": []},
+      "write_back": [],
+      "risk_level": "low"
+    },
+    {
+      "id": "review_apparel_sample",
+      "description": "当用户需要评审服装样衣的合体、比例、结构、材料或工艺时使用",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "request": {"type": "string", "minLength": 1},
+          "project_context": {"type": "object"},
+          "references": {"type": "array"},
+          "constraints": {"type": "object"},
+          "response_language": {"type": "string", "default": "zh-CN"}
+        },
+        "required": ["request"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "summary": {"type": "string"},
+          "route": {"type": "string"},
+          "version": {"type": "string"},
+          "sections": {"type": "array", "items": {"type": "object"}},
+          "decision_log": {"type": "object"},
+          "quality_checks": {"type": "array", "items": {"type": "object"}},
+          "next_action": {"type": "string"}
+        },
+        "required": ["summary", "route", "version", "sections", "decision_log", "quality_checks", "next_action"],
+        "additionalProperties": false
+      },
+      "required_permissions": {"data": [], "tools": []},
+      "write_back": [],
+      "risk_level": "low"
+    },
+    {
+      "id": "craft_apparel_product_story",
+      "description": "当用户需要服装产品故事、特征、升级点或有证据约束的卖点时使用",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "request": {"type": "string", "minLength": 1},
+          "project_context": {"type": "object"},
+          "references": {"type": "array"},
+          "constraints": {"type": "object"},
+          "response_language": {"type": "string", "default": "zh-CN"}
+        },
+        "required": ["request"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "summary": {"type": "string"},
+          "route": {"type": "string"},
+          "version": {"type": "string"},
+          "sections": {"type": "array", "items": {"type": "object"}},
+          "decision_log": {"type": "object"},
+          "quality_checks": {"type": "array", "items": {"type": "object"}},
+          "next_action": {"type": "string"}
+        },
+        "required": ["summary", "route", "version", "sections", "decision_log", "quality_checks", "next_action"],
+        "additionalProperties": false
+      },
+      "required_permissions": {"data": [], "tools": []},
+      "write_back": [],
+      "risk_level": "low"
+    }
+  ]
+}
